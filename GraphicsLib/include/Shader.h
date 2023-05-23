@@ -9,7 +9,7 @@ struct ShaderProgramSource
 	std::string VertexSource;
 	std::string FragmentSource;
 };
-//запретить копирование объекта
+
 class Shader
 {
 private:
@@ -25,6 +25,10 @@ private:
 public:
 	Shader(const std::string& filepath);
 	~Shader();
+
+	// DONE: запретить копирование объекта
+	Shader(const Shader&) = delete;
+	Shader& operator=(const Shader&) = delete;
 
 	void Bind() const;
 	void Unbind() const;
