@@ -23,8 +23,8 @@ public:
 		{
 			std::cout << "Error" << std::endl;
 		}
-		glEnable(GL_DEPTH_TEST);
-		glDepthFunc(GL_LESS);
+		//glEnable(GL_DEPTH_TEST);
+		//glDepthFunc(GL_LESS);
 	}
 	BaseWindow(const BaseWindow&) = delete;
 	BaseWindow& operator=(const BaseWindow&) = delete;
@@ -39,6 +39,7 @@ public:
 		ImGuiInitializer imGui(m_window);
 		ImGuiIO& io = ImGui::GetIO();
 		(void)io;
+		ImGui::SetNextWindowSize(ImVec2(400, 500));
 		while (!glfwWindowShouldClose(m_window))
 		{
 			ImGui_ImplOpenGL3_NewFrame();

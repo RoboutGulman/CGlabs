@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	std::vector<glm::vec2> startPoints{
+	BezierCurvePoints startPoints{
 		{ 200.0f, 600.0f },
 		{ 430.0f, 150.0f },
 		{ 750.0f, 300.0f },
@@ -15,7 +15,7 @@ int main(void)
 	};
 	GLFWInitializer glfwInitializer;
 	Window window{1000,	800,"Bezier Curve", 
-		startPoints[0], startPoints[1], startPoints[2], startPoints[3]
+		startPoints
 	};
 	window.Run();
 }

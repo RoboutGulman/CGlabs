@@ -18,7 +18,7 @@ public:
 		m_shader.Bind();
 		m_shader.SetUniformMatrix4fv("m_model", glm::mat4(1.0f));
 		m_shader.SetUniformMatrix4fv("m_view", glm::mat4(1.0f));
-		m_shader.SetUniformMatrix4fv("m_projection", glm::ortho(0.0f, 1280.0f, 720.0f, 0.0f, -1.0f, 100.0f));
+		m_shader.SetUniformMatrix4fv("m_projection", glm::ortho(0.0f, float(width), float(height), 0.0f, -1.0f, 100.0f));
 		m_shader.SetUniform1f("u_dashSize", 10.0f);
 		m_shader.SetUniform1f("u_gapSize", 10.0f);
 		m_shader.SetUniform2f("u_resolution", float(width), float(height));

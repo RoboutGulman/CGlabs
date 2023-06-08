@@ -6,10 +6,10 @@
 #include "VertexBufferLayout.h"
 #include "utils.h"
 
-class BezierPoints
+class BezierPointsView
 {
 public:
-	BezierPoints()
+	BezierPointsView()
 		: m_va()
 		, m_vb(nullptr, sizeof(glm::vec2) * POINTS_COUNT)
 		, m_ib(GetIndices(POINTS_COUNT))

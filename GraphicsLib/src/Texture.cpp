@@ -5,7 +5,7 @@
 #include <iostream>
 
 Texture::Texture(const std::string& path)
-	: m_rendererID(0)
+	: m_id(0)
 	, m_filePath(path)
 	, m_localBuffer(nullptr)
 	, m_width(0)
@@ -15,8 +15,8 @@ Texture::Texture(const std::string& path)
 	stbi_set_flip_vertically_on_load(1);
 	m_localBuffer = stbi_load(path.c_str(), &m_width, &m_height, &m_BPP, 4); // 4-RGBA channel
 
-	GLCall(glGenTextures(1, &m_rendererID));
-	GLCall(glBindTexture(GL_TEXTURE_2D, m_rendererID));
+	GLCall(glGenTextures(1, &m_id));
+	GLCall(glBindTexture(GL_TEXTURE_2D, m_id));
 
 	GLCall(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR));
 	GLCall(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR));
@@ -26,7 +26,7 @@ Texture::Texture(const std::string& path)
 	if (m_localBuffer)
 	{
 		GLCall(glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, m_width, m_height, 0, GL_RGBA, GL_UNSIGNED_BYTE, m_localBuffer));
-		GLCall(glBindTexture(GL_TEXTURE_2D, m_rendererID));
+		GLCall(glBindTexture(GL_TEXTURE_2D, m_id));
 		stbi_image_free(m_localBuffer);
 	}
 	else
@@ -39,14 +39,14 @@ Texture::Texture(const std::string& path)
 
 Texture::~Texture()
 {
-	GLCall(glDeleteTextures(1, &m_rendererID));
+	GLCall(glDeleteTextures(1, &m_id));
 }
 
 void Texture::Bind(unsigned int slot) const
 {
 	GLCall(glActiveTexture(GL_TEXTURE0 + slot));
-	GLCall(glBindTexture(GL_TEXTURE_2D, m_rendererID));
-	GLCall(glBindTextureUnit(slot, m_rendererID));
+	GLCall(glBindTexture(GL_TEXTURE_2D, m_id));
+	GLCall(glBindTextureUnit(slot, m_id));
 }
 
 void Texture::Unbind() const

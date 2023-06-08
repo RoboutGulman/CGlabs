@@ -1,10 +1,12 @@
 #pragma once
+#include "stdafx.h"
+
 #include <vector>
 
 class IndexBuffer
 {
 private:
-	unsigned int m_rendererID;
+	unsigned int m_id;
 	unsigned int m_count;
 
 public:

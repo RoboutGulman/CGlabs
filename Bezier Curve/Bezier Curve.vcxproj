@@ -161,7 +161,6 @@
     <ClInclude Include="include\Controls.h" />
     <ClInclude Include="include\Model\BezierCurveModel.h" />
     <ClInclude Include="include\SnubDodecahedron.h" />
-    <ClInclude Include="include\View\BezierCurve.h" />
     <ClInclude Include="include\View\BezierPoints.h" />
     <ClInclude Include="include\View\Controls.h" />
     <ClInclude Include="include\View\CoordinateSystem.h" />

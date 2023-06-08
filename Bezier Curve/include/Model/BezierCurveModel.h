@@ -1,30 +1,29 @@
 #pragma once
 #include "stdafx.h"
-#include "glm/glm.hpp"
+
+#include "Primitives/BezierCurve.h"
+
 #include <stdexcept>
 #include <vector>
 
 class BezierCurveModel
 {
 public:
-	BezierCurveModel(const glm::vec2& p1, const glm::vec2& p2, const glm::vec2& p3, const glm::vec2& p4)
-		: m_p1(p1)
-		, m_p2(p2)
-		, m_p3(p3)
-		, m_p4(p4)
+	BezierCurveModel(BezierCurvePoints points)
+		: m_points(points.p1, points.p2, points.p3, points.p4)
 	{
 	}
 
-	std::vector<glm::vec2> GetPoints()
+	BezierCurvePoints GetPoints()
 	{
-		return { m_p1, m_p2, m_p3, m_p4 };
+		return m_points;
 	}
 
 	std::vector<glm::vec2*> GetPointsPtr()
 	{
-		return { &m_p1, &m_p2, &m_p3, &m_p4 };
+		return { &m_points.p1, &m_points.p2, &m_points.p3, &m_points.p4 };
 	}
 
 private:
-	glm::vec2 m_p1, m_p2, m_p3, m_p4;
+	BezierCurvePoints m_points;
 };

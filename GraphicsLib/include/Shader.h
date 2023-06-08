@@ -2,7 +2,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "glm/glm.hpp" 
+#include "glm/glm.hpp"
 
 struct ShaderProgramSource
 {
@@ -14,7 +14,7 @@ class Shader
 {
 private:
 	std::string m_filePath;
-	unsigned int m_rendererID;
+	unsigned int m_id;
 	std::unordered_map<std::string, int> m_uniformLocationCache;
 
 	int GetUniformLocation(const std::string& name);
@@ -39,5 +39,6 @@ public:
 	void SetUniform2f(const std::string& name, float v1, float v2);
 	void SetUniform1iv(const std::string& name, int value);
 	void SetUniform4f(const std::string& name, float v0, float v1, float v2, float v3);
+	void SetUniform4f(const std::string& name, glm::vec4 value);
 	void SetUniformMatrix4fv(const std::string& name, const glm::mat4& matrix);
 };

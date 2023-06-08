@@ -5,18 +5,18 @@
 
 VertexBuffer::VertexBuffer()
 {
-	GLCall(glGenBuffers(1, &m_rendererID));
-	GLCall(glBindBuffer(GL_ARRAY_BUFFER, m_rendererID));
+	GLCall(glGenBuffers(1, &m_id));
+	GLCall(glBindBuffer(GL_ARRAY_BUFFER, m_id));
 }
 
 VertexBuffer::~VertexBuffer()
 {
-	GLCall(glDeleteBuffers(1, &m_rendererID));
+	GLCall(glDeleteBuffers(1, &m_id));
 }
 
 void VertexBuffer::Bind() const
 {
-	GLCall(glBindBuffer(GL_ARRAY_BUFFER, m_rendererID));
+	GLCall(glBindBuffer(GL_ARRAY_BUFFER, m_id));
 }
 
 void VertexBuffer::Unbind() const
