@@ -1,36 +1,57 @@
 #pragma once
+#include <Primitives/BasePrimitive.h>
 #include <Primitives/BezierCurve.h>
-#include <Primitives/Circle.h>
+#include <Primitives/Ellipse.h>
 #include <Renderer.h>
 
-class Butterfly
+class Butterfly : public BasePrimitive
 {
 public:
-	Butterfly(glm::vec2 topLeftPoint, float width, float height)
-		: m_topLeftPoint(topLeftPoint)
-		, m_width(width)
-		, m_height(height)
+	Butterfly(glm::vec3 position, float width, float height, glm::vec4 color, float angle = 0.f)
+		: BasePrimitive(width, height, position, angle)
+		, m_bezier(color)
 	{
 	}
 
-	void Draw(const Renderer& renderer, Shader& shader) const
+	void Draw(const Renderer& renderer, Shader& shader)
 	{
+		ApplyModelTransform(shader);
+
 		DrawButterflyBody(renderer, shader);
+		DrawButterflyWings(renderer, shader);
+		DrawButterflyAntenna(renderer, shader);
+
+		SetWidth(-GetWidth());
+		ApplyModelTransform(shader);
+
+		DrawButterflyBody(renderer, shader);
+		DrawButterflyWings(renderer, shader);
+		DrawButterflyAntenna(renderer, shader);
+
+		DisableModelTransform(shader);
+		SetWidth(-GetWidth());
 	}
 
 private:
 	void DrawButterflyBody(const Renderer& renderer, Shader& shader) const
 	{
-		BezierCurvePoints points({ m_topLeftPoint.x + 0.f, m_topLeftPoint.y + 0.3f * m_height },
-			{ m_topLeftPoint.x + 0.125f * m_width, m_topLeftPoint.y + 0.3f * m_height },
-			{ m_topLeftPoint.x + 0.0725f * m_width, m_topLeftPoint.y - 0.15f * m_height },
-			{ m_topLeftPoint.x + 0.f, m_topLeftPoint.y - 0.1f * m_height });
+		m_bezier.Draw(renderer, shader, { { 0.f, 0.3f }, { 0.125f, 0.3f }, { 0.0725f, 0.15f }, { 0.f, 0.1f } });
 
-		BezierCurve bezier({ 1.0f, 1.0f, 1.0f, 1.0f });
-
-		bezier.Draw(renderer, shader, points);
+		m_bezier.Draw(renderer, shader, { { 0.f, 0.2f }, { 0.1f, 0.3f }, { 0.025f, 0.55f }, { 0.f, 0.5f } });
 	}
 
-	glm::vec2 m_topLeftPoint;
-	float m_width, m_height;
+	void DrawButterflyWings(const Renderer& renderer, Shader& shader) const
+	{
+		m_bezier.Draw(renderer, shader, { { 0.f, 0.2f }, { 0.8f, 0.9f }, { 1.5f, .0f }, { 0.f, -0.4f } });
+
+		m_bezier.Draw(renderer, shader, { { 0.f, 0.f }, { 1.0f, -0.4f }, { 0.2f, -1.4f }, { 0.f, -0.4f } });
+	}
+
+	void DrawButterflyAntenna(const Renderer& renderer, Shader& shader) const
+	{
+		m_bezier.Draw(renderer, shader, { { 0.0f, 0.5f }, { 0.3f, 1.2f }, { 0.5f, 1.7f }, { 0.4f, 1.2f } });
+	}
+
+private:
+	BezierCurve m_bezier;
 };

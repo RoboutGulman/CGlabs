@@ -5,12 +5,13 @@
 #include "../VertexBuffer/StaticVertexBuffer.h"
 #include "../VertexBufferLayout.h"
 
-class Rectangle
+class Rectangle : BasePrimitive
 {
 public:
-	Rectangle(glm::vec2 topLeftPoint, float width, float height, glm::vec4 color)
-		: m_va()
-		, m_vb(GetPoints(topLeftPoint, width, height))
+	Rectangle(glm::vec3 position, float width, float height, glm::vec4 color)
+		: BasePrimitive(width, height, position)
+		, m_va()
+		, m_vb(GetPoints())
 		, m_ib(GetIndices())
 		, m_color(color)
 	{
@@ -21,9 +22,11 @@ public:
 
 	void Draw(const Renderer& renderer, Shader& shader)
 	{
+		ApplyModelTransform(shader);
 		shader.Bind();
 		shader.SetUniform4f("u_color", m_color);
 		renderer.Draw(GL_TRIANGLES, m_va, m_ib, shader);
+		DisableModelTransform(shader);
 	}
 
 private:
@@ -32,13 +35,13 @@ private:
 	IndexBuffer m_ib;
 	glm::vec4 m_color;
 
-	std::vector<glm::vec2> GetPoints(glm::vec2 topLeftPoint, float width, float height)
+	std::vector<glm::vec2> GetPoints()
 	{
 		return {
-			{ topLeftPoint.x, topLeftPoint.y + height },
-			{ topLeftPoint.x + width, topLeftPoint.y + height },
-			{ topLeftPoint.x + width, topLeftPoint.y },
-			topLeftPoint
+			{ 0, 1.0f },
+			{ 1.0f, 1.0f },
+			{ 1.0f, 0.0f },
+			{ 0.0f, 0.0f }
 		};
 	}
 

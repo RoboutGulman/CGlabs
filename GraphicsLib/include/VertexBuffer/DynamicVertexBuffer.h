@@ -13,7 +13,7 @@ public:
 		GLCall(glBufferData(GL_ARRAY_BUFFER, size, data, GL_DYNAMIC_DRAW));
 	}
 
-	void AddVertices(const std::vector<glm::vec2>& vertices)
+	void AddVertices(const std::vector<glm::vec2>& vertices) const
 	{
 		Bind();
 		GLCall(glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(glm::vec2), &vertices[0], GL_DYNAMIC_DRAW));

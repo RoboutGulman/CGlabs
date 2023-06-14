@@ -1004,7 +1004,10 @@
     <ClInclude Include="include\Primitives\BezierCurve.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Primitives\Circle.h">
+    <ClInclude Include="include\Primitives\Ellipse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Primitives\BasePrimitive.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

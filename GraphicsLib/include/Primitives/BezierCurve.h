@@ -38,7 +38,7 @@ public:
 		m_va.AddBuffer(m_vb, layout);
 	}
 
-	void Draw(const Renderer& renderer, Shader& shader, BezierCurvePoints points)
+	void Draw(const Renderer& renderer, Shader& shader, BezierCurvePoints points) const
 	{
 		shader.SetUniform4f("u_color", m_color);
 		m_vb.AddVertices(GetCurveVertices(points));
@@ -52,7 +52,7 @@ private:
 	IndexBuffer m_ib;
 	glm::vec4 m_color;
 
-	std::vector<glm::vec2> GetCurveVertices(BezierCurvePoints points)
+	std::vector<glm::vec2> GetCurveVertices(BezierCurvePoints points) const
 	{
 		// P = (1-t)^3*P1 + 3*(1-t)^2*t*P2 + 3*(1-t)*t^2*P3 + t^3*P4
 		std::vector<glm::vec2> vertices;
