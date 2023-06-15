@@ -160,6 +160,8 @@
   <ItemGroup>
     <ClInclude Include="include\Butterfly.h" />
     <ClInclude Include="include\Cloud.h" />
+    <ClInclude Include="include\Flower.h" />
+    <ClInclude Include="include\Grass.h" />
     <ClInclude Include="include\Window.h" />
   </ItemGroup>
   <ItemGroup>
