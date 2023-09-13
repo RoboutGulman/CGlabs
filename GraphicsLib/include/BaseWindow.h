@@ -23,8 +23,8 @@ public:
 		{
 			std::cout << "Error" << std::endl;
 		}
-		//glEnable(GL_DEPTH_TEST);
-		//glDepthFunc(GL_LESS);
+		glEnable(GL_DEPTH_TEST);
+		glDepthFunc(GL_LESS);
 	}
 	BaseWindow(const BaseWindow&) = delete;
 	BaseWindow& operator=(const BaseWindow&) = delete;

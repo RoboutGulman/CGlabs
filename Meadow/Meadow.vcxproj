@@ -167,6 +167,11 @@
   <ItemGroup>
     <None Include="res\shaders\Basic.shader" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GraphicsLib\GraphicsLib.vcxproj">
+      <Project>{7bd66579-921c-440a-9290-fffb10329c6b}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

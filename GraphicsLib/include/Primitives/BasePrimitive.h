@@ -53,6 +53,26 @@ protected:
 	{
 	}
 
+	std::vector<glm::vec3> CalculateNormals(const std::vector<PolytopeVertex>& vertices) const
+	{
+		std::vector<glm::vec3> normals;
+		auto vertexCount = vertices.size();
+		for (size_t i = 0; i < vertexCount; i += 3)
+		{
+			auto firstVector = glm::vec3(vertices[i + 1].coordinates.x - vertices[i].coordinates.x, vertices[i + 1].coordinates.y - vertices[i].coordinates.y, vertices[i + 1].coordinates.z - vertices[i].coordinates.z);
+			auto secondVector = glm::vec3(vertices[i + 2].coordinates.x - vertices[i].coordinates.x, vertices[i + 2].coordinates.y - vertices[i].coordinates.y, vertices[i + 2].coordinates.z - vertices[i].coordinates.z);
+
+			auto normal = glm::cross(firstVector, secondVector);
+			normal = glm::normalize(normal);
+
+			normals.push_back({ normal.x, normal.y, normal.z });
+			normals.push_back({ normal.x, normal.y, normal.z });
+			normals.push_back({ normal.x, normal.y, normal.z });
+		}
+
+		return normals;
+	}
+
 private:
 	glm::vec3 m_position;
 	float m_width, m_height, m_angle;

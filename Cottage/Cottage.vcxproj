@@ -158,8 +158,19 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\BasePolytope.h" />
+    <ClInclude Include="include\model\Cube\Cube.h" />
+    <ClInclude Include="include\model\Cube\TextureCube.h" />
+    <ClInclude Include="include\PolytopeTriangle.h" />
+    <ClInclude Include="include\PolytopeVertex.h" />
+    <ClInclude Include="include\rooms\BaseRoom.h" />
     <ClInclude Include="include\Controls.h" />
-    <ClInclude Include="include\SnubDodecahedron.h" />
+    <ClInclude Include="include\Cottage.h" />
+    <ClInclude Include="include\IDrawable.h" />
+    <ClInclude Include="include\IPolytopeDrawable.h" />
+    <ClInclude Include="include\rooms\LivingRoom.h" />
+    <ClInclude Include="include\TexturedPolytope.h" />
+    <ClInclude Include="include\PolytopeVerticesReader.h" />
     <ClInclude Include="include\Window.h" />
   </ItemGroup>
   <ItemGroup>
@@ -167,12 +178,17 @@
     <None Include="res\shaders\Skybox.shader" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="include\model\assets\skybox\back.jpg" />
-    <Image Include="include\model\assets\skybox\bottom.jpg" />
-    <Image Include="include\model\assets\skybox\front.jpg" />
-    <Image Include="include\model\assets\skybox\left.jpg" />
-    <Image Include="include\model\assets\skybox\right.jpg" />
-    <Image Include="include\model\assets\skybox\top.jpg" />
+    <Image Include="include\model\assets\accentBrickwall.jpg" />
+    <Image Include="include\model\assets\skybox\back.png" />
+    <Image Include="include\model\assets\skybox\bottom.png" />
+    <Image Include="include\model\assets\skybox\front.png" />
+    <Image Include="include\model\assets\skybox\left.png" />
+    <Image Include="include\model\assets\skybox\right.png" />
+    <Image Include="include\model\assets\skybox\top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="include\model\assets\cube.txt" />
+    <Text Include="include\model\assets\pyramid.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

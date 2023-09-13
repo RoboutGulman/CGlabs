@@ -27,11 +27,13 @@ struct BezierCurvePoints
 class BezierCurve
 {
 public:
-	BezierCurve(glm::vec4 color)
+	BezierCurve(glm::vec4 color, bool isFilled)
 		: m_va()
+		, VERTEX_COUNT(isFilled ? 201 : 200)
 		, m_vb(nullptr, sizeof(glm::vec2) * VERTEX_COUNT)
 		, m_ib(GetIndices(VERTEX_COUNT))
 		, m_color(color)
+		, m_isFilled(isFilled)
 	{
 		VertexBufferLayout layout;
 		layout.Push<glm::vec2>(1);
@@ -42,15 +44,16 @@ public:
 	{
 		shader.SetUniform4f("u_color", m_color);
 		m_vb.AddVertices(GetCurveVertices(points));
-		renderer.Draw(GL_LINE_STRIP, m_va, m_ib, shader);
+		renderer.Draw(m_isFilled ? GL_TRIANGLE_FAN : GL_LINE_STRIP, m_va, m_ib, shader);
 	}
 
 private:
-	const unsigned int VERTEX_COUNT = 2000;
+	unsigned int VERTEX_COUNT;
 	VertexArray m_va;
 	DynamicVertexBuffer m_vb;
 	IndexBuffer m_ib;
 	glm::vec4 m_color;
+	bool m_isFilled;
 
 	std::vector<glm::vec2> GetCurveVertices(BezierCurvePoints points) const
 	{
@@ -59,12 +62,17 @@ private:
 
 		const float alpha = 1.0f / VERTEX_COUNT;
 
+		if (m_isFilled)
+		{
+			vertices.emplace_back(0.f, 0.f);
+		}
+
 		for (float t = 0.0f; t < 1.0f; t += alpha)
 		{
 			// отформатировать код, чтобы формула читалась лучше(устранить дублирование кода)
 			glm::vec2 v = {
-				(1.0f - t) * (1.0f - t) * (1.0f - t) * points.p1.x + 3.0f * (1.0f - t) * (1.0f - t) * t * points.p2.x + 3.0f * (1 - t) * t * t * points.p3.x + t * t * t * points.p4.x,
-				(1.0f - t) * (1.0f - t) * (1.0f - t) * points.p1.y + 3.0f * (1.0f - t) * (1.0f - t) * t * points.p2.y + 3.0f * (1 - t) * t * t * points.p3.y + t * t * t * points.p4.y
+				pow((1.0f - t), 3) * points.p1.x + 3.0f * pow((1.0f - t), 2) * t * points.p2.x + 3.0f * (1 - t) * t * t * points.p3.x + pow(t, 3) * points.p4.x,
+				pow((1.0f - t), 3) * points.p1.y + 3.0f * pow((1.0f - t), 2) * t * points.p2.y + 3.0f * (1 - t) * t * t * points.p3.y + pow(t, 3) * points.p4.y
 			};
 			vertices.emplace_back(std::move(v));
 		}

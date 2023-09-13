@@ -23,13 +23,46 @@
     <ClInclude Include="include\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\SnubDodecahedron.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Controls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Cottage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rooms\BaseRoom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IDrawable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IPolytopeDrawable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BasePolytope.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TexturedPolytope.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rooms\LivingRoom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\model\Cube\TextureCube.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\model\Cube\Cube.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PolytopeVerticesReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PolytopeVertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PolytopeTriangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,23 +71,30 @@
     <None Include="res\shaders\Skybox.shader" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="include\model\assets\skybox\back.jpg">
+    <Image Include="include\model\assets\skybox\back.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\skybox\bottom.jpg">
+    <Image Include="include\model\assets\skybox\bottom.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\skybox\front.jpg">
+    <Image Include="include\model\assets\skybox\front.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\skybox\left.jpg">
+    <Image Include="include\model\assets\skybox\left.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\skybox\right.jpg">
+    <Image Include="include\model\assets\skybox\right.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\skybox\top.jpg">
+    <Image Include="include\model\assets\skybox\top.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="include\model\assets\accentBrickwall.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="include\model\assets\cube.txt" />
+    <Text Include="include\model\assets\pyramid.txt" />
   </ItemGroup>
 </Project>

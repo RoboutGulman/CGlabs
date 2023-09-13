@@ -42,11 +42,11 @@ Texture::~Texture()
 	GLCall(glDeleteTextures(1, &m_id));
 }
 
-void Texture::Bind(unsigned int slot) const
+void Texture::Bind(GLenum activeTexture = GL_TEXTURE0) const
 {
-	GLCall(glActiveTexture(GL_TEXTURE0 + slot));
+	GLCall(glActiveTexture(activeTexture));
 	GLCall(glBindTexture(GL_TEXTURE_2D, m_id));
-	GLCall(glBindTextureUnit(slot, m_id));
+	//GLCall(glBindTextureUnit(activeTexture, m_id));
 }
 
 void Texture::Unbind() const
