@@ -9,8 +9,6 @@ public:
 	{
 		for (auto&& roomPart : m_roomParts)
 		{
-			//shader.SetUniformMatrix4fv(uniformMap.modelUniform.c_str(), roomPart->BuildModelMatrix())
-			//program.SetUniform4fv(uniformMap.modelUniform.c_str(), roomPart->BuildModelMatrix());
 			roomPart->Draw(renderer, shader);
 		}
 	}

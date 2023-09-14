@@ -11,9 +11,9 @@
 class Skybox
 {
 public:
-	Skybox(const std::vector<std::string>& faces)
+	Skybox(float size, const std::vector<std::string>& faces)
 		: m_va()
-		, m_vb(GetPoints())
+		, m_vb(GetPoints(size))
 		, m_ib(GetIndices(VERTEX_COUNT))
 		, m_cubemapTexture(faces)
 	{
@@ -24,7 +24,6 @@ public:
 		layout.Push<glm::vec3>(1);
 		m_va.AddBuffer(m_vb, layout);
 
-		
 		m_va.Unbind();
 		m_cubemapTexture.Unbind();
 	}
@@ -43,9 +42,9 @@ private:
 
 	CubemapTexture m_cubemapTexture;
 
-	std::vector<glm::vec3> GetPoints()
+	std::vector<glm::vec3> GetPoints(float size)
 	{
-		return {
+		std::vector<glm::vec3> vertices = {
 			{ -1.0f, 1.0f, -1.0f },
 			{ -1.0f, -1.0f, -1.0f },
 			{ 1.0f, -1.0f, -1.0f },
@@ -88,6 +87,11 @@ private:
 			{ -1.0f, -1.0f, 1.0f },
 			{ 1.0f, -1.0f, 1.0f }
 		};
+		for (int i = 0; i < vertices.size(); i++)
+		{
+			vertices[i] *= size;
+		}
+		return vertices;
 	}
 
 	std::vector<GLuint> GetIndices(size_t size)

@@ -1,4 +1,6 @@
 #pragma once
+#include "VertexBufferLayout.h"
+#include "VertexBuffer/StaticVertexBuffer.h"
 #include "IPolytopeDrawable.h"
 #include "PolytopeVerticesReader.h"
 #include "Primitives/BasePrimitive.h"
@@ -8,7 +10,7 @@ class BasePolytope : public IPolytopeDrawable
 {
 public:
 	BasePolytope(const std::string& verticesFilePath, size_t verticesNumber, float width, float height, float depth, glm::vec3 position, glm::vec3 angle = { 0.f, 0.f, 0.f })
-		: BasePrimitive(width, height, position)
+		: BasePrimitive(width, height, depth, position)
 		, m_va()
 		, m_vb(GetPoints(verticesFilePath))
 		, m_ib(GetIndices(verticesNumber))
@@ -28,11 +30,6 @@ public:
 		// shader.SetUniform4f("u_color", m_color);
 		renderer.Draw(GL_TRIANGLES, m_va, m_ib, shader);
 		DisableModelTransform(shader);
-	}
-
-	glm::mat4 BuildModelMatrix() const override
-	{
-		return glm::mat4();
 	}
 
 private:

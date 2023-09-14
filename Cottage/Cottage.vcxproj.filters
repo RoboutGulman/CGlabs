@@ -65,6 +65,21 @@
     <ClInclude Include="include\PolytopeTriangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\model\Pyramid\Pyramid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\model\Pyramid\TexturedPyramid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Grass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rooms\Garage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Fence.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\Basic.shader" />
@@ -90,6 +105,27 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="include\model\assets\accentBrickwall.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="include\model\assets\brickwall.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="include\model\assets\door.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="include\model\assets\fence.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="include\model\assets\garageDoor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="include\model\assets\grass.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="include\model\assets\roof.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="include\model\assets\window.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

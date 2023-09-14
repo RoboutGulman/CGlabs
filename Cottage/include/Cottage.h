@@ -1,23 +1,27 @@
 #pragma once
+#include "Grass.h"
+#include "rooms/Garage.h"
 #include "rooms/LivingRoom.h"
+#include "Fence.h"
 
 class Cottage
 {
 public:
-
 	Cottage()
 	{
 	}
 
-	void Draw(int width, int height) const
+	void Draw(const Renderer& renderer, Shader& shader) const
 	{
-		//m_livingRoom.Draw(m_shaderProgram, m_shaderUniformMap);
-	}
-
-	void UpdateVPMatrices(int width, int height) const
-	{
+		m_livingRoom.Draw(renderer, shader);
+		m_grass.Draw(renderer, shader);
+		m_garage.Draw(renderer, shader);
+		m_fence.Draw(renderer, shader);
 	}
 
 private:
 	LivingRoom m_livingRoom;
+	Grass m_grass;
+	Garage m_garage;
+	Fence m_fence;
 };

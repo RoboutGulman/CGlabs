@@ -56,7 +56,5 @@ void main()
 
 	vec3 result = (ambient + diffuse) * Color;
 
-	//fragColor = vec4(1.0);
-	fragColor = texture(u_sampler, TexCoord);
-	//fragColor = vec4(ambient + diffuse, 1) * texture2D(u_sampler, TexCoord);
+	fragColor = vec4(ambient + diffuse, 1) * texture2D(u_sampler, TexCoord);
 }

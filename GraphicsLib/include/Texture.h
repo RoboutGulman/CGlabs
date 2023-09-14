@@ -13,7 +13,7 @@ public:
 	Texture(const std::string& path);
 	~Texture();
 
-	void Bind(unsigned int slot = 0) const;
+	void Bind(GLenum activeTexture = GL_TEXTURE0) const;
 	void Unbind() const;
 
 	inline int GetWidth() const

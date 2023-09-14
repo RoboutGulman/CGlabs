@@ -12,10 +12,6 @@ public:
 		m_texture.Bind();
 		m_polytope->Draw(renderer, shader);
 	}
-	glm::mat4 BuildModelMatrix() const override
-	{
-		return m_polytope->BuildModelMatrix();
-	}
 
 protected:
 	TexturedPolytope(std::unique_ptr<IPolytopeDrawable>&& polytope, const std::string& texturePath)

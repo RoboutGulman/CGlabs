@@ -18,6 +18,7 @@ public:
 
 	glm::mat4 GetMVPMatrix(GLFWwindow* window, int width, int height)
 	{
+		//std::cout << "position" << m_position.x << ' '<<m_position.y
 		ComputeMatricesFromInputs(window, width, height);
 		return m_projection * m_view * m_model;
 	}
@@ -26,7 +27,7 @@ private:
 	const float SPEED = 3.0f;
 	const float MOUSE_SPEED = 0.03f;
 	const float FOV = 45.0f;
-	const glm::vec3 START_POSITION{ 0, 0, 5 };
+	const glm::vec3 START_POSITION{ 0.5, 0.5, 5 };
 
 	double m_lastTime;
 	glm::mat4 m_projection;
