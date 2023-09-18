@@ -29,10 +29,10 @@
     <ClInclude Include="include\Controls.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Cottage.h">
+    <ClInclude Include="include\CompoundObects\Cottage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\rooms\BaseRoom.h">
+    <ClInclude Include="include\CompoundObects\CompoundObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\IDrawable.h">
@@ -47,7 +47,7 @@
     <ClInclude Include="include\TexturedPolytope.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\rooms\LivingRoom.h">
+    <ClInclude Include="include\CompoundObects\LivingRoom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\model\Cube\TextureCube.h">
@@ -71,13 +71,19 @@
     <ClInclude Include="include\model\Pyramid\TexturedPyramid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Grass.h">
+    <ClInclude Include="include\CompoundObects\Grass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\rooms\Garage.h">
+    <ClInclude Include="include\CompoundObects\Garage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Fence.h">
+    <ClInclude Include="include\CompoundObects\Fence.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CompoundObects\Bedroom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CompoundObects\DiningRoom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -116,9 +122,6 @@
     <Image Include="include\model\assets\fence.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\garageDoor.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="include\model\assets\grass.jpg">
       <Filter>Resource Files</Filter>
     </Image>
@@ -126,6 +129,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="include\model\assets\window.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="include\model\assets\garageDoor.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

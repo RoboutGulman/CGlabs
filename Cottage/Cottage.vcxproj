@@ -159,21 +159,23 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\BasePolytope.h" />
-    <ClInclude Include="include\Fence.h" />
-    <ClInclude Include="include\Grass.h" />
+    <ClInclude Include="include\CompoundObects\Bedroom.h" />
+    <ClInclude Include="include\CompoundObects\DiningRoom.h" />
+    <ClInclude Include="include\CompoundObects\Fence.h" />
+    <ClInclude Include="include\CompoundObects\Grass.h" />
     <ClInclude Include="include\model\Cube\Cube.h" />
     <ClInclude Include="include\model\Cube\TextureCube.h" />
     <ClInclude Include="include\model\Pyramid\Pyramid.h" />
     <ClInclude Include="include\model\Pyramid\TexturedPyramid.h" />
     <ClInclude Include="include\PolytopeTriangle.h" />
     <ClInclude Include="include\PolytopeVertex.h" />
-    <ClInclude Include="include\rooms\BaseRoom.h" />
+    <ClInclude Include="include\CompoundObects\CompoundObject.h" />
     <ClInclude Include="include\Controls.h" />
-    <ClInclude Include="include\Cottage.h" />
+    <ClInclude Include="include\CompoundObects\Cottage.h" />
     <ClInclude Include="include\IDrawable.h" />
     <ClInclude Include="include\IPolytopeDrawable.h" />
-    <ClInclude Include="include\rooms\Garage.h" />
-    <ClInclude Include="include\rooms\LivingRoom.h" />
+    <ClInclude Include="include\CompoundObects\Garage.h" />
+    <ClInclude Include="include\CompoundObects\LivingRoom.h" />
     <ClInclude Include="include\TexturedPolytope.h" />
     <ClInclude Include="include\PolytopeVerticesReader.h" />
     <ClInclude Include="include\Window.h" />
@@ -187,7 +189,7 @@
     <Image Include="include\model\assets\brickwall.jpg" />
     <Image Include="include\model\assets\door.jpg" />
     <Image Include="include\model\assets\fence.jpg" />
-    <Image Include="include\model\assets\garageDoor.png" />
+    <Image Include="include\model\assets\garageDoor.jpg" />
     <Image Include="include\model\assets\grass.jpg" />
     <Image Include="include\model\assets\roof.jpg" />
     <Image Include="include\model\assets\skybox\back.png" />

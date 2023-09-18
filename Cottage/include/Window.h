@@ -4,11 +4,10 @@
 #include "BaseWindow.h"
 #include "Renderer.h"
 
+#include "CompoundObects/Cottage.h"
 #include "Controls.h"
-#include "rooms/LivingRoom.h"
 #include <Primitives/Skybox.h>
 #include <ShaderMVPUniformMap.h>
-#include "Cottage.h"
 
 const float SKYBOX_SIZE = 8.0f;
 

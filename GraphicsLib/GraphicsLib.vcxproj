@@ -198,6 +198,8 @@
     <ClInclude Include="include\GLFWInitializer.h" />
     <ClInclude Include="include\ImGuiInitializer.h" />
     <ClInclude Include="include\IndexBuffer.h" />
+    <ClInclude Include="include\LightSource\ILightSource.h" />
+    <ClInclude Include="include\LightSource\LightSourceImpl.h" />
     <ClInclude Include="include\Primitives\BasePrimitive.h" />
     <ClInclude Include="include\Primitives\BezierCurve.h" />
     <ClInclude Include="include\Primitives\Ellipse.h" />

@@ -1010,6 +1010,12 @@
     <ClInclude Include="include\Primitives\BasePrimitive.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\LightSource\ILightSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LightSource\LightSourceImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\vendor\glm\detail\func_common.inl">

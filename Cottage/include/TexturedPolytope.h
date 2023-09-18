@@ -1,10 +1,10 @@
 #pragma once
-#include "IPolytopeDrawable.h"
+#include "IDrawable.h"
 #include <Texture.h>
 #include <memory>
 #include <string>
 
-class TexturedPolytope : public IPolytopeDrawable
+class TexturedPolytope : public IDrawable
 {
 public:
 	void Draw(const Renderer& renderer, Shader& shader) const override
@@ -14,13 +14,13 @@ public:
 	}
 
 protected:
-	TexturedPolytope(std::unique_ptr<IPolytopeDrawable>&& polytope, const std::string& texturePath)
+	TexturedPolytope(std::unique_ptr<IDrawable>&& polytope, const std::string& texturePath)
 		: m_polytope(std::move(polytope))
 		, m_texture(texturePath)
 	{
 	}
 
 private:
-	std::unique_ptr<IPolytopeDrawable> m_polytope;
+	std::unique_ptr<IDrawable> m_polytope;
 	Texture m_texture;
 };
