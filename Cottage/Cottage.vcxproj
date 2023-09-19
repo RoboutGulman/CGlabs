@@ -173,7 +173,6 @@
     <ClInclude Include="include\Controls.h" />
     <ClInclude Include="include\CompoundObects\Cottage.h" />
     <ClInclude Include="include\IDrawable.h" />
-    <ClInclude Include="include\IPolytopeDrawable.h" />
     <ClInclude Include="include\CompoundObects\Garage.h" />
     <ClInclude Include="include\CompoundObects\LivingRoom.h" />
     <ClInclude Include="include\TexturedPolytope.h" />
@@ -185,24 +184,24 @@
     <None Include="res\shaders\Skybox.shader" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="include\model\assets\accentBrickwall.jpg" />
-    <Image Include="include\model\assets\brickwall.jpg" />
-    <Image Include="include\model\assets\door.jpg" />
-    <Image Include="include\model\assets\fence.jpg" />
-    <Image Include="include\model\assets\garageDoor.jpg" />
-    <Image Include="include\model\assets\grass.jpg" />
-    <Image Include="include\model\assets\roof.jpg" />
-    <Image Include="include\model\assets\skybox\back.png" />
-    <Image Include="include\model\assets\skybox\bottom.png" />
-    <Image Include="include\model\assets\skybox\front.png" />
-    <Image Include="include\model\assets\skybox\left.png" />
-    <Image Include="include\model\assets\skybox\right.png" />
-    <Image Include="include\model\assets\skybox\top.png" />
-    <Image Include="include\model\assets\window.jpg" />
+    <Image Include="res\assets\accentBrickwall.jpg" />
+    <Image Include="res\assets\brickwall.jpg" />
+    <Image Include="res\assets\door.jpg" />
+    <Image Include="res\assets\fence.jpg" />
+    <Image Include="res\assets\garageDoor.jpg" />
+    <Image Include="res\assets\grass.jpg" />
+    <Image Include="res\assets\roof.jpg" />
+    <Image Include="res\assets\skybox\back.png" />
+    <Image Include="res\assets\skybox\bottom.png" />
+    <Image Include="res\assets\skybox\front.png" />
+    <Image Include="res\assets\skybox\left.png" />
+    <Image Include="res\assets\skybox\right.png" />
+    <Image Include="res\assets\skybox\top.png" />
+    <Image Include="res\assets\window.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="include\model\assets\cube.txt" />
-    <Text Include="include\model\assets\pyramid.txt" />
+    <Text Include="res\assets\cube.txt" />
+    <Text Include="res\assets\pyramid.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

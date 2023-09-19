@@ -65,9 +65,6 @@ private:
 
 		glfwSetCursorPos(window, width / 2, height / 2);
 
-		std::cout  << "position " << m_position.x << ' ' << m_position.y << ' ' << m_position.z << std::endl;
-		//std::cout << "angle " << m_verticalAngle << ' ' << ' ' << m_horizontalAngle << std::endl;
-
 		m_horizontalAngle += MOUSE_SPEED * deltaTime * float(width / 2 - xpos);
 		m_verticalAngle += MOUSE_SPEED * deltaTime * float(height / 2 - ypos);
 

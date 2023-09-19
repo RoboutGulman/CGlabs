@@ -38,9 +38,6 @@
     <ClInclude Include="include\IDrawable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\IPolytopeDrawable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\BasePolytope.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -92,51 +89,51 @@
     <None Include="res\shaders\Skybox.shader" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="include\model\assets\skybox\back.png">
+    <Image Include="res\assets\skybox\back.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\skybox\bottom.png">
+    <Image Include="res\assets\skybox\bottom.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\skybox\front.png">
+    <Image Include="res\assets\skybox\front.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\skybox\left.png">
+    <Image Include="res\assets\skybox\left.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\skybox\right.png">
+    <Image Include="res\assets\skybox\right.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\skybox\top.png">
+    <Image Include="res\assets\skybox\top.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\accentBrickwall.jpg">
+    <Image Include="res\assets\accentBrickwall.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\brickwall.jpg">
+    <Image Include="res\assets\brickwall.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\door.jpg">
+    <Image Include="res\assets\door.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\fence.jpg">
+    <Image Include="res\assets\fence.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\grass.jpg">
+    <Image Include="res\assets\grass.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\roof.jpg">
+    <Image Include="res\assets\roof.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\window.jpg">
+    <Image Include="res\assets\window.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="include\model\assets\garageDoor.jpg">
+    <Image Include="res\assets\garageDoor.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="include\model\assets\cube.txt" />
-    <Text Include="include\model\assets\pyramid.txt" />
+    <Text Include="res\assets\cube.txt" />
+    <Text Include="res\assets\pyramid.txt" />
   </ItemGroup>
 </Project>

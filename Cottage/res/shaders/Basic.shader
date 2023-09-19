@@ -21,8 +21,6 @@ void main()
 	FragPos = vec3(u_model * vec4(position, 1.0));
 	Normal = normal;
 	gl_Position = MVP * vec4(FragPos, 1.0);
-	//gl_Position = u_projection * u_view * vec4(FragPos, 1.0f);
-	//Color = vec3(1.0);
 	Color=colors;
 	TexCoord = texCoord;
 };
