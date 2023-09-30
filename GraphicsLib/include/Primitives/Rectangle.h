@@ -5,11 +5,13 @@
 #include "../VertexBuffer/StaticVertexBuffer.h"
 #include "../VertexBufferLayout.h"
 
+#include "BasePrimitive.h"
+
 class Rectangle : BasePrimitive
 {
 public:
 	Rectangle(glm::vec3 position, float width, float height, glm::vec4 color)
-		: BasePrimitive(width, height, position)
+		: BasePrimitive(width, height, 0, position)
 		, m_va()
 		, m_vb(GetPoints())
 		, m_ib(GetIndices())

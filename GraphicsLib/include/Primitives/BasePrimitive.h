@@ -2,6 +2,7 @@
 #include "../stdafx.h"
 
 #include "../Shader.h"
+#include "../../../Cottage/include/PolytopeVertex.h"
 
 class BasePrimitive
 {
