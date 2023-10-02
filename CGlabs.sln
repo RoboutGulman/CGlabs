@@ -8,14 +8,28 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polyhedron", "Polyhedron\Polyhedron.vcxproj", "{DD9E61A8-D04F-40A2-BFF4-DEE6F54DBCBE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bezier Curve", "Bezier Curve\Bezier Curve.vcxproj", "{27E5E8C9-6C7A-42B9-9778-AC50BE3C880B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7BD66579-921C-440A-9290-FFFB10329C6B} = {7BD66579-921C-440A-9290-FFFB10329C6B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProbabilityCalculation", "ProbabilityCalculation\ProbabilityCalculation.vcxproj", "{84D54681-031C-4399-A67D-82A9914B51F0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cottage", "Cottage\Cottage.vcxproj", "{DD0E611B-B246-4F45-A0DB-F0217DC5158D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7BD66579-921C-440A-9290-FFFB10329C6B} = {7BD66579-921C-440A-9290-FFFB10329C6B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Meadow", "Meadow\Meadow.vcxproj", "{8013D8B0-3797-4BBF-B983-A89FD509F2EE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mandelbrot", "Mandelbrot\Mandelbrot.vcxproj", "{83290AC2-3FFA-44C0-B1AA-ED2D5E01E079}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7BD66579-921C-440A-9290-FFFB10329C6B} = {7BD66579-921C-440A-9290-FFFB10329C6B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Kanabola", "Kanabola\Kanabola.vcxproj", "{F6068EAE-E4C2-4EE5-B157-2765D8A1494A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7BD66579-921C-440A-9290-FFFB10329C6B} = {7BD66579-921C-440A-9290-FFFB10329C6B}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +95,14 @@ Global
 		{83290AC2-3FFA-44C0-B1AA-ED2D5E01E079}.Release|x64.Build.0 = Release|x64
 		{83290AC2-3FFA-44C0-B1AA-ED2D5E01E079}.Release|x86.ActiveCfg = Release|Win32
 		{83290AC2-3FFA-44C0-B1AA-ED2D5E01E079}.Release|x86.Build.0 = Release|Win32
+		{F6068EAE-E4C2-4EE5-B157-2765D8A1494A}.Debug|x64.ActiveCfg = Debug|x64
+		{F6068EAE-E4C2-4EE5-B157-2765D8A1494A}.Debug|x64.Build.0 = Debug|x64
+		{F6068EAE-E4C2-4EE5-B157-2765D8A1494A}.Debug|x86.ActiveCfg = Debug|Win32
+		{F6068EAE-E4C2-4EE5-B157-2765D8A1494A}.Debug|x86.Build.0 = Debug|Win32
+		{F6068EAE-E4C2-4EE5-B157-2765D8A1494A}.Release|x64.ActiveCfg = Release|x64
+		{F6068EAE-E4C2-4EE5-B157-2765D8A1494A}.Release|x64.Build.0 = Release|x64
+		{F6068EAE-E4C2-4EE5-B157-2765D8A1494A}.Release|x86.ActiveCfg = Release|Win32
+		{F6068EAE-E4C2-4EE5-B157-2765D8A1494A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

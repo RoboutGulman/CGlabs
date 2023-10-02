@@ -27,7 +27,7 @@ public:
 		, m_shader("res/shaders/Basic.shader")
 		, m_renderer()
 		, m_model(points)
-		, m_bezierCurve({ 0.95f, 0.3f, 0.15f, 1.0f })
+		, m_bezierCurve({ 0.95f, 0.3f, 0.15f, 1.0f }, false)
 		, m_bezierPoints()
 		, m_coordinateSystem(w, h)
 		, m_dottedLines(w, h)
