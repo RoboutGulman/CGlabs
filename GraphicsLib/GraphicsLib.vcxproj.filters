@@ -1016,6 +1016,12 @@
     <ClInclude Include="include\LightSource\LightSourceImpl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\TexturedPrimitives\TexturedRectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TexturedPrimitives\VertexWithTextureCoord.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\vendor\glm\detail\func_common.inl">

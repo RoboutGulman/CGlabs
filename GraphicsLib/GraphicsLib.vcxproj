@@ -205,10 +205,12 @@
     <ClInclude Include="include\Primitives\Ellipse.h" />
     <ClInclude Include="include\Primitives\Rectangle.h" />
     <ClInclude Include="include\Primitives\Skybox.h" />
+    <ClInclude Include="include\TexturedPrimitives\TexturedRectangle.h" />
     <ClInclude Include="include\Renderer.h" />
     <ClInclude Include="include\Shader.h" />
     <ClInclude Include="include\ShaderMVPUniformMap.h" />
     <ClInclude Include="include\Texture.h" />
+    <ClInclude Include="include\TexturedPrimitives\VertexWithTextureCoord.h" />
     <ClInclude Include="include\Triangle.h" />
     <ClInclude Include="src\vendor\glm\common.hpp" />
     <ClInclude Include="src\vendor\glm\detail\compute_common.hpp" />

@@ -8,9 +8,10 @@ private:
 	std::string m_filePath;
 	unsigned char* m_localBuffer;
 	int m_width, m_height, m_BPP;
+	GLenum m_target;
 
 public:
-	Texture(const std::string& path);
+	Texture(const std::string& path, GLenum target = GL_TEXTURE_2D);
 	~Texture();
 
 	void Bind(GLenum activeTexture = GL_TEXTURE0) const;
