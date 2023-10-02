@@ -8,7 +8,7 @@ class Grass : public CompoundObject
 public:
 	Grass()
 	{
-		std::unique_ptr<IDrawable> surface = std::make_unique<TextureCube>(std::move(std::make_unique<Cube>(10, 0.1f, 10, glm::vec3{ 0, -1, -1 })), "res\\assets\\grass.jpg");
+		std::unique_ptr<IDrawable> surface = std::make_unique<TextureCube>(std::move(std::make_unique<Cube>(11, 0.1f, 11, glm::vec3{ 0, -1, -1 })), "res\\assets\\grass.jpg");
 
 		m_parts.push_back(std::move(surface));
 	}

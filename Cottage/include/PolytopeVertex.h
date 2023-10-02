@@ -6,10 +6,10 @@
 
 struct PolytopeVertex
 {
-	PolytopeVertex(glm::vec3 coordinates, glm::vec3 color, glm::vec2 textureCoord) // glm::vec3 normals, glm::vec2 textureCoord)
+	PolytopeVertex(glm::vec3 coordinates, glm::vec3 color, glm::vec2 textureCoord)
 		: coordinates(coordinates)
 		, color(color)
-		//, normals(normals)
+		, normals(glm::vec3(1.0))
 		, textureCoord(textureCoord)
 	{
 	}

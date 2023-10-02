@@ -13,8 +13,6 @@ out vec2 TexCoord;
 
 uniform mat4 MVP;
 uniform mat4 u_model;
-uniform mat4 u_view;
-uniform mat4 u_projection;
 
 void main()
 {

@@ -2,7 +2,6 @@
 #include "stdafx.h"
 #include <iomanip>
 
-// m_controls в конструкторе
 class Controls
 {
 public:

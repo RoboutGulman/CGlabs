@@ -40,12 +40,15 @@ private:
 	{
 		PolytopeVerticesReader polytopeReader;
 		std::vector<PolytopeVertex> vertices;
+
 		polytopeReader.GetVerticesFromFile(verticesFilePath, vertices);
+
 		std::vector<glm::vec3> normals = CalculateNormals(vertices);
 		for (int i = 0; i < normals.size(); i++)
 		{
 			vertices[i].normals = normals[i];
 		}
+
 		return vertices;
 	}
 

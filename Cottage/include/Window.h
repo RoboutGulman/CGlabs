@@ -7,7 +7,6 @@
 #include "CompoundObects/Cottage.h"
 #include "Controls.h"
 #include <Primitives/Skybox.h>
-#include <ShaderMVPUniformMap.h>
 
 const float SKYBOX_SIZE = 10.0f;
 
@@ -18,7 +17,7 @@ public:
 		: BaseWindow(w, h, title)
 		, m_controls()
 		, m_skyboxShader("res/shaders/Skybox.shader")
-		, m_shader("res/shaders/Basic.shader")
+		, m_cottageShader("res/shaders/Basic.shader")
 		, m_renderer()
 		, m_skybox(SKYBOX_SIZE, GetFaces())
 	{
@@ -28,11 +27,11 @@ private:
 	Renderer m_renderer;
 	Skybox m_skybox;
 	Shader m_skyboxShader;
-	Shader m_shader;
+	Shader m_cottageShader;
 	Controls m_controls;
 	Cottage m_cottage;
 	const glm::vec3 LIGHT_COLOR{ 1.0f, 1.0f, 1.0f };
-	const glm::vec3 LIGHT_POSITION{ 10.2f, 10.0f, 10.0f };
+	const glm::vec3 LIGHT_POSITION{ 10.0f, 10.0f, 10.0f };
 
 	void Draw(int width, int height, ImGuiIO& io) override
 	{
@@ -41,13 +40,13 @@ private:
 		m_skyboxShader.Bind();
 		m_skyboxShader.SetUniformMatrix4fv("MVP", m_controls.GetMVPMatrix(m_window, width, height));
 
-		m_shader.Bind();
-		m_shader.SetUniformMatrix4fv("MVP", m_controls.GetMVPMatrix(m_window, width, height));
-		m_shader.SetUniform3f("u_lightColor", LIGHT_COLOR);
-		m_shader.SetUniform3f("u_lightPos", LIGHT_POSITION);
+		m_cottageShader.Bind();
+		m_cottageShader.SetUniformMatrix4fv("MVP", m_controls.GetMVPMatrix(m_window, width, height));
+		m_cottageShader.SetUniform3f("u_lightColor", LIGHT_COLOR);
+		m_cottageShader.SetUniform3f("u_lightPos", LIGHT_POSITION);
 
 		m_skybox.Draw(m_renderer, m_skyboxShader);
-		m_cottage.Draw(m_renderer, m_shader);
+		m_cottage.Draw(m_renderer, m_cottageShader);
 	}
 
 	std::vector<std::string> GetFaces()
