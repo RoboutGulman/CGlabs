@@ -4,6 +4,7 @@
 #include "../Shader.h"
 #include "../../../Cottage/include/PolytopeVertex.h"
 
+//базовый класс - сомнительное решение
 class BasePrimitive
 {
 public:
@@ -55,6 +56,7 @@ protected:
 	{
 	}
 
+	// в этом классе этой функции не место
 	std::vector<glm::vec3> CalculateNormals(const std::vector<PolytopeVertex>& vertices) const
 	{
 		std::vector<glm::vec3> normals;
