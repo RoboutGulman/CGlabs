@@ -13,7 +13,7 @@ public:
 private:
 	Renderer m_renderer;
 	Shader m_shader;
-	TexturedRectangle m_rectangle;
+	TexturedRectangle m_mandelbrot;
 	Controls m_controls;
 
 	void Draw(int width, int height, ImGuiIO& io) override;

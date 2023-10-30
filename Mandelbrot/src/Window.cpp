@@ -15,8 +15,8 @@ Window::Window(int w, int h, const char* title)
 	: BaseWindow(w, h, title)
 	, m_shader("res/shaders/Basic.shader")
 	, m_renderer()
-	, m_rectangle(glm::vec3{ 0, 0, 0 }, w, h, "res\\assets\\pallete.png", glm::vec4{ 1.0f })
-	, m_controls(0.0f, 0.0f, 0.005f)
+	, m_mandelbrot(glm::vec3{ 0, 0, 0 }, w, h, "res\\assets\\pallete.png", glm::vec4{ 1.0f })
+	, m_controls(0.0f, 0.0f, 0.0025f)
 {
 	m_shader.Bind();
 	glm::mat4 view = glm::mat4(1.0f);
@@ -48,8 +48,8 @@ void Window::Draw(int width, int height, ImGuiIO& io)
 
 	m_shader.Bind();
 	m_shader.SetUniform1f("zoom", m_controls.GetZoomNormalized());
-	m_shader.SetUniform2f("controls", m_controls.GetX(), m_controls.GetY());
-	m_rectangle.Draw(m_renderer, m_shader);
+	m_shader.SetUniform2f("mouseDelta", m_controls.GetX(), m_controls.GetY());
+	m_mandelbrot.Draw(m_renderer, m_shader);
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)

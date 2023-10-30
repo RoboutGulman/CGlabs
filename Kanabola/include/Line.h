@@ -9,8 +9,9 @@
 class Line : public BasePrimitive
 {
 public:
+	//количество точек не должно называться precision
 	Line(float startX, float finishX, unsigned int precision, float width, float height, glm::vec3 position)
-		: BasePrimitive(width, height, 0, position)
+		: BasePrimitive(width, height, 0, position, 180)
 		, m_va()
 		, m_vb(GetPoints(startX, finishX, precision))
 		, m_ib(GetIndices(startX, finishX, precision))

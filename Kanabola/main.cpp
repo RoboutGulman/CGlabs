@@ -2,7 +2,8 @@
 
 #include "GLFWInitializer.h"
 #include "include/Window.h"
-
+//shader повернуть канаболу на 90
+//ответ: поменять синус и косинус местами
 int main(void)
 {
 	GLFWInitializer glfwInitializer;

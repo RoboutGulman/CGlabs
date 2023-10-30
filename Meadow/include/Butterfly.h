@@ -8,7 +8,7 @@ class Butterfly : public BasePrimitive
 {
 public:
 	Butterfly(glm::vec3 position, float width, float height, glm::vec4 bodyColor, glm::vec4 antennaColor, glm::vec4 wingsColor, float angle = 0.f)
-		: BasePrimitive(width, height, position, angle)
+		: BasePrimitive(width, height, 0, position, angle)
 		, m_wingsBezier(wingsColor, true)
 		, m_bodyBezier(bodyColor, true)
 		, m_antennasBezier(antennaColor, false)

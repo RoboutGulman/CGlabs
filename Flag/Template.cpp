@@ -6,6 +6,6 @@
 int main(void)
 {
 	GLFWInitializer glfwInitializer;
-	Window window{ 800, 600, "Hello World" };
+	Window window{ 800, 600, "Flag" };
 	window.Run();
 }

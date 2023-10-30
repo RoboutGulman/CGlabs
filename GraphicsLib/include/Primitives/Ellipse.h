@@ -11,7 +11,7 @@ class Ellipse : public BasePrimitive
 {
 public:
 	Ellipse(glm::vec3 position, float width, float height, glm::vec4 color, float angle = 0.f)
-		: BasePrimitive(width, height, { position.x , position.y , position.z }, angle)
+		: BasePrimitive(width, height, 0, { position.x , position.y , position.z }, angle)
 		, m_va()
 		, m_vb(GetPoints(position, width, height))
 		, m_ib(GetIndices(VERTEX_COUNT))
